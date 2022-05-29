@@ -34,7 +34,10 @@ class Lavadora():
         self.suavizante = False
 
     def programa_lavado(self, programa):
-        return programa
+        programas = ["rápido", "normal", "delicado"]
+        if programa in programas:
+            return programa
+        return "Programa seleccionado es erróneo"
 
     def __str__(self):
         return f"{self.marca}, {self.modelo}, {self.capacidad}"
